@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PlaywrightDotnetAzurePipeline.Framework/PlaywrightDotnetAzurePipeline.Framework.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PlaywrightDotnetAzurePipeline.Tests/PlaywrightDotnetAzurePipeline.Tests.csproj" />
+    <Project Path="tests/PlaywrightDotnetAzurePipeline.UnitTests/PlaywrightDotnetAzurePipeline.UnitTests.csproj" />
+  </Folder>
+</Solution>
