@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PlaywrightDotnetAzurePipeline.Framework.Configuration;
 using PlaywrightDotnetAzurePipeline.Framework.Pages;
 using PlaywrightDotnetAzurePipeline.Tests.Fixtures;
 
@@ -10,13 +9,13 @@ namespace PlaywrightDotnetAzurePipeline.Tests.Tests;
 public class LoginTests : BaseTest
 {
     private LoginPage _loginPage = null!;
-    private TestConfiguration _configuration = null!;
+    private AccountsOverviewPage _accountsOverviewPage = null!;
 
     [SetUp]
     public void LoginTestsSetUp()
     {
         _loginPage = Services.GetRequiredService<LoginPage>();
-        _configuration = Services.GetRequiredService<TestConfiguration>();
+        _accountsOverviewPage = Services.GetRequiredService<AccountsOverviewPage>();
     }
 
     [Test]
@@ -25,6 +24,6 @@ public class LoginTests : BaseTest
         await _loginPage.GoToAsync();
         await _loginPage.LoginAsync(username: "john", password: "demo");
 
-        await Expect(Page).ToHaveURLAsync($"{_configuration.BaseUrl}/overview.htm");
+        await Expect(_accountsOverviewPage.AccountOverviewHeading).ToBeVisibleAsync();
     }
 }

@@ -30,6 +30,7 @@ public abstract class BaseTest : PageTest
         services.AddSingleton(_request);
 
         services.AddScoped<LoginPage>();
+        services.AddScoped<AccountsOverviewPage>();
 
         var scopedProvider = services.BuildServiceProvider();
         _scope = scopedProvider.CreateScope();
