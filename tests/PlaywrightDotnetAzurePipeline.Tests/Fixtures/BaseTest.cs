@@ -31,6 +31,8 @@ public abstract class BaseTest : PageTest
 
         services.AddScoped<LoginPage>();
         services.AddScoped<AccountsOverviewPage>();
+        services.AddScoped<RegistrationPage>();
+        services.AddScoped<RegistrationConfirmationPage>();
 
         var scopedProvider = services.BuildServiceProvider();
         _scope = scopedProvider.CreateScope();

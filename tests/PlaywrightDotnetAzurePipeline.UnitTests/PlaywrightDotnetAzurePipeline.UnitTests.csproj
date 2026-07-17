@@ -30,8 +30,4 @@
     <ProjectReference Include="..\..\src\PlaywrightDotnetAzurePipeline.Framework\PlaywrightDotnetAzurePipeline.Framework.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="HelperTests\" />
-  </ItemGroup>
-
 </Project>
